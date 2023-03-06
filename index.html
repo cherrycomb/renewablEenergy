@@ -361,6 +361,18 @@
 			var radius = Math.sqrt(area / Math.PI);
 			return radius * .6;
 		}
+
+
+     //layer control off/on
+     var sourcesLayers = {
+      "<b style='color:#a6cee3'>Wind</b>": windLayer,
+      "<b style='color:#ffff99; text-shadow: 0px 0px 3px #333;'>Solar</b>": solarLayer,
+      "<b style='color: #b3885d'> Geothermal</b>": geothermalLayer
+    }
+
+    L.control.layers(null, sourcesLayers, {
+      collaped: false
+    }).addTo(map);
 	</script>
 
 </body>
